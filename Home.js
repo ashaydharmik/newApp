@@ -1,4 +1,3 @@
-//import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
 import { Button } from 'react-native-paper';
@@ -22,12 +21,12 @@ class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{ flex: 1, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center', backgroundColor: 'yellow', }}>
+                <View style={{ flex: 1, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' }}>
                     <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Crud App</Text>
                 </View>
-                <View style={{ flex: 5, marginHorizontal: 15 }}>
+                <View style={{ flex: 5 }}>
                     <ScrollView >
-                        <TextInput style={styles.textInput} placeholder='ID' />
+
                         <TextInput style={styles.textInput} placeholder='Name' />
                         <TextInput style={styles.textInput} keyboardType='number-pad' maxLength={10}
                             placeholder='Phone' />
@@ -42,7 +41,8 @@ class Home extends Component {
                         Update
                     </Button>
 
-                    <TextInput style={styles.textInput} placeholder='ID' />
+                    <TextInput style={styles.textInput} keyboardType='number-pad' maxLength={10}
+                        placeholder='Phone' />
                     <Button style={{ backgroundColor: 'red', paddingVertical: 5, marginBottom: 10 }} mode="contained" onPress={() => console.log('Pressed')}>
                         Delete
                     </Button>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     textInput: {
         borderColor: '#000',
-        borderEndWidth: 1,
+        borderWidth: 1,
         paddingHorizontal: 10,
         paddingVertical: 10,
         borderRadius: 5,
@@ -77,4 +77,3 @@ const styles = StyleSheet.create({
 
 //make this component available to the app
 export default Home;
-
